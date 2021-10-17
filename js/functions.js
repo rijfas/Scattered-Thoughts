@@ -39,10 +39,10 @@ const login = () => {
   const userName = document.querySelector("#username").value;
   if (userName) {
     localStorage.setItem("user", userName);
+    setUserAvatar();
     userMenu.classList.remove("hidden");
     userMenu.classList.add("flex");
     posts.innerHTML = loadingSpinner;
-    setUserAvatar();
     loadPosts();
   }
 };
